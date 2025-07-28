@@ -15,7 +15,7 @@ class Item(
     @ColumnInfo("price")
     var price :String?,
 
-    @ColumnInfo("ımage")
+    @ColumnInfo("image")
     var image:ByteArray?
 
 
