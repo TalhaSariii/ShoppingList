@@ -43,6 +43,8 @@ android {
 
 dependencies {
 
+    val nav_version = "2.8.0-rc01"
+    implementation("androidx.navigation:navigation-compose:$nav_version") 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -51,6 +53,9 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.navigation.runtime.android)
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -62,12 +67,11 @@ dependencies {
     val room_version = "2.6.1"
     implementation("androidx.room:room-runtime:$room_version")
 
-    // To use Kotlin annotation processing tool (kapt)
     ksp("androidx.room:room-compiler:$room_version")
-    // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$room_version")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
-    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
-    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
     implementation("io.coil-kt:coil-compose:2.0.0")
 }
